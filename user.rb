@@ -4,6 +4,6 @@ class User
   def initialize (name, id)
     @name = name
     @id = id
-    @movies = []
+    @rented = []
   end
 end
