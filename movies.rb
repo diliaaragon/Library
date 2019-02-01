@@ -9,9 +9,13 @@ class Movie
    @histoy = []
   end 
 
-  def update()
+  def rented (x)
+    x.quantity -= 1
+    x.renteds += 1
   end
 
-
-
+  def returned(x)
+    x.quantity += 1
+    x.renteds -= 1
+  end
 end

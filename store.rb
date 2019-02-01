@@ -1,6 +1,6 @@
 class Store
   attr_accessor :movies :user :categorias
-
+ 
   def initialize 
     @movies =[]
     @user = []
@@ -22,6 +22,12 @@ class Store
     end
   end
 
+  def edit_movie(index,name,quant)
+    change  = @movies[index] 
+    change.name = name
+    change.quant = quant
+  end
+
   def edit_movie(index)
   end
 
@@ -40,6 +46,12 @@ class Store
     end
   end
 
+  def edit_user(index,name,id)
+    change  = @user[index] 
+    change.name = name
+    change.id = id 
+  end
+
   def add_category(name)
     p = Categories.new(name)
     @categories << p
@@ -54,4 +66,23 @@ class Store
      puts "#{index}. #{name}"
     end
   end
+
+  def edit_category(index,name)
+    change  = @categories[index] 
+    change.name = name 
+  end
+  
+  def exit_movie(index,user)
+    @user.each do |user2|
+      if user2.id == user
+        new_salida = @movies[index]
+        methos.add_movie_here(new_salida)
+        puts "All ready"
+      else 
+        puts "This suario does not exist"
+      end
+    end
+  end
+
 end
+method = Store.new
