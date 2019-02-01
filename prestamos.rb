@@ -1,2 +1,0 @@
-class Prestamos
-end

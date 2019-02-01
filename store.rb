@@ -1,0 +1,2 @@
+class store
+end
