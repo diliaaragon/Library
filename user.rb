@@ -6,5 +6,4 @@ class User
     @id = id
     @movies = []
   end
-
 end
